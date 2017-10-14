@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <Button
+            android:id="@+id/original"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Original"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/magicColor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:text="Magic color"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/grayMode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:text="Gray Mode"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/BWMode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:singleLine="true"
+            android:text="B and W"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_back"
+        android:orientation="horizontal"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:text="Get Measurement" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/scanButton"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/scanPadding"
+        >
+    <FrameLayout
+        android:id="@+id/sourceFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/scanPadding">
+
+        <ImageView
+            android:adjustViewBounds="true"
+            android:id="@+id/scannedImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+
+    </FrameLayout>
+        <com.app.matrixframe.util.PolygonViewWithTwoPoint
+            android:id="@+id/polygonView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+           ></com.app.matrixframe.util.PolygonViewWithTwoPoint>
+    </FrameLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/view_drawing_pad"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </LinearLayout>
+
+</RelativeLayout>

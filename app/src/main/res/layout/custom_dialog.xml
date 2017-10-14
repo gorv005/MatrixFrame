@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+
+        android:layout_gravity="center"
+
+        android:layout_height="wrap_content" >
+        <RelativeLayout
+            android:background="@drawable/pop_up"
+            android:layout_width="match_parent"
+
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/dialog_title_text"
+                android:text="Title"
+                android:visibility="gone"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+            <EditText
+                android:textColorHint="#A0A0A0"
+                android:hint="Enter scale length"
+                android:id="@+id/edit1"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:maxLength="8"
+                android:text=""
+                android:layout_margin="10dp"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="130dp"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/dialog_cancel_text"
+                    android:layout_width="wrap_content"
+                    android:text="CANCEL"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/dialog_ok_text"
+                    android:layout_width="wrap_content"
+                    android:text="DONE"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
